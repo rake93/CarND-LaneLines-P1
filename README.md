@@ -11,37 +11,46 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
 ---
-# The goals / steps of this project are the following:
+## The goals / steps of this project are the following:
 
 Make a pipeline that finds lane lines on the road
 
 Reflect on your work in a written report
 
 # **Reflection**
-**1. Description of pipeline:**
+## 1. Description of pipeline:
 
-My pipeline consisted of 5 steps as:
+###### My pipeline consisted of 5 steps as:
 
-Conversion of the images to grayscale.
+ 1.Conversion of the images to grayscale.
 
-Applied Gaussian Blur with kernel size of 5 to smoothen the images.
-
-Used Canny Edge Detector to get edges information from the images.
-
-Cropped images to consider only lower half of the images.
-
-Used Hough Transform to detect lines
+ 2.Applied Gaussian Blur with kernel size of 5 to smoothen the images.
+ 
+ 3.Used Canny Edge Detector to get edges information from the images.
+ 
+ 4.Cropped images to consider only lower half of the images.
+ 
+ 5.Used Hough Transform to detect lines
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by following logic:
 
-Separated left lane lines and right lane lines using slope of lines.
+ - Separated left lane lines and right lane lines using slope of lines.
 
-Got bottom most point of line and top most point of line for both left and right lane lines.
+ - Got bottom most point of line and top most point of line for both left and right lane lines.
 
-Using these points, drawn lane lines
+ - Using these points, drawn lane lines
 
 Example images for various statges of pipeline:
 
 1. grayscale_output.jpg
 
 <img src="test_images_output/grayscale_output.jpg" width="480" alt="Combined Image" />
+
+2. hough_lines_output.jpg
+
+<img src="test_images_output/hough_lines_output.jpg" width="480" alt="Combined Image" />
+
+3. final_output.jpg
+
+<img src="test_images_output/final_output.jpg" width="480" alt="Combined Image" />
+
